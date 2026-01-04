@@ -1,58 +1,3 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-<meta charset="UTF-8">
-<title>Hey Küstük mü?</title>
-
-<style>
-  body {
-    background: #fde2e4;
-    font-family: Arial, sans-serif;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .box {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    text-align: center;
-    width: 320px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-  }
-  button {
-    margin: 10px;
-    padding: 10px 20px;
-    border-radius: 10px;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  .yes { background: #ff6f91; color: white; }
-  .no { background: #4caf50; color: white; }
-
-  img {
-    max-width: 100%;
-    border-radius: 10px;
-    margin-top: 15px;
-  }
-</style>
-</head>
-
-<body>
-
-<div class="box">
-  <h2 id="text">Hey küstük mü Başak Hanım</h2>
-
-  <div id="buttons">
-    <button class="yes" onclick="secim('evet')">Evet</button>
-    <button class="no" onclick="secim('hayir')">Hayır</button>
-  </div>
-
-  <div id="image"></div>
-</div>
-
 <script>
   let step = 0;
 
@@ -63,8 +8,8 @@
 
     if (step === 0) {
       if (answer === "evet") {
-        text.innerText = "bence küsmedik.";
-        buttons.innerHTML = "";
+        text.innerText = "Bence küsmedik.";
+        step = 1; // 👈 devam edebilmesi için
       } else {
         text.innerText = "Gel tatlı yiyelim tatlı konuşalım.";
         step = 1;
