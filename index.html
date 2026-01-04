@@ -9,26 +9,24 @@
     if (step === 0) {
       if (answer === "evet") {
         text.innerText = "Bence küsmedik.";
-        step = 1; // 👈 devam edebilmesi için
       } else {
         text.innerText = "Gel tatlı yiyelim tatlı konuşalım.";
-        step = 1;
       }
+      step++;
     }
 
     else if (step === 1) {
       if (answer === "evet") {
         text.innerText = "Hadi barışalım.";
-        buttons.innerHTML = "";
       } else {
         text.innerText = "Bence barışabiliriz.";
-        step = 2;
       }
+      step++;
     }
 
     else if (step === 2) {
       text.innerText = "Ama olmaz ki böyle son kararın mı.";
-      step = 3;
+      step++;
     }
 
     else if (step === 3) {
@@ -40,6 +38,3 @@
     }
   }
 </script>
-
-</body>
-</html>
